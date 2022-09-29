@@ -1,0 +1,42 @@
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: max-content 1fr;
+  max-width: 30rem;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+label {
+  padding-top: 0.5rem;
+}
+
+/* :invalid is set on initial form render */
+[aria-invalid='true'] {
+  border: 1px solid red;
+}
+
+form [role='alert'] {
+  grid-column: 2 / -1;
+  color: red;
+}
+
+footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
